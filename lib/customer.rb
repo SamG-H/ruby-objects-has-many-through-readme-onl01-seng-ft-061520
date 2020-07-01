@@ -1,3 +1,6 @@
+# frozen_string_literal: false
+
+# a customer class
 class Customer
   attr_accessor :name, :age
   @@all = []

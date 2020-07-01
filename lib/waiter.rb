@@ -1,3 +1,6 @@
+# frozen_string_literal: false
+
+# a waiter class
 class Waiter
   attr_accessor :name, :age
   @@all = []
@@ -23,12 +26,10 @@ class Waiter
   def best_tipper
     best_tip = 0
     best_tipper = nil
-    Meal.all.each do |meal| 
-      if (best_tip < meal.tip)
+    Meal.all.each do |meal|
+      if best_tip < meal.tip
         best_tip = meal.tip
         best_tipper = meal.customer
-      else
-
       end
     end
     best_tipper
